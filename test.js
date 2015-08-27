@@ -12,6 +12,13 @@ describe('Browserslist Saucelabs', () => {
         );
 
         deepEqual(
+            browsers2sauce({ browsers: ['edge 1'] }),
+            [
+                { browserName: 'Microsoft Edge', version: '20', platform: 'Windows 10' },
+            ]
+        );
+
+        deepEqual(
             browsers2sauce({ browsers: ['ios 8.4'] }),
             [
                 { browserName: 'iPhone', version: '8.1', platform: 'OS X 10.10', deviceName: 'iPhone Simulator' },
